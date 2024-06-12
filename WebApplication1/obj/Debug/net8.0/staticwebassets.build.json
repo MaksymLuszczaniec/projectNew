@@ -1,11 +1,39 @@
 {
   "Version": 1,
-  "Hash": "ozPU8KMwOlbQHpcE5qZTZ7CirEa+BWCC4ogaz+QJEsE=",
+  "Hash": "toibK3wD/PDJjekTHpHuMfpXhO5HmXADEQHvBgmv0MI=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApplication1\\wwwroot",
+      "Source": "WebApplication1",
+      "ContentRoot": "D:\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\WebApplication1\\WebApplication1\\wwwroot\\site.css",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\site.css"
+    }
+  ]
 }

@@ -8,7 +8,10 @@
             {
                 temperature = (temperature - 32) * 5 / 9;
             }
-
+            if (temperature >= 39)
+            {
+                return "You have a high fever.";
+            }
             if (temperature >= 37)
             {
                 return "You have a fever.";
@@ -19,10 +22,13 @@
             }
             else
             {
-                return "Your temperature is normal.";
+                return "Your temperature is ok";
             }
         }
     }
 }
+
+
+
 
 

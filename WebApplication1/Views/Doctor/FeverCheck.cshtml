@@ -4,22 +4,24 @@
 
 <h2>Fever Check</h2>
 
-<form asp-action="FeverCheck" method="post">
-    <div>
+<form asp-action="FeverCheck" method="post" class="fever-check-form">
+    <div class="form-group">
         <label for="temperature">Temperature:</label>
-        <input type="number" step="0.1" id="temperature" name="temperature" required />
+        <input type="number" step="0.1" id="temperature" name="temperature" class="form-control" required />
     </div>
-    <div>
+    <div class="form-group">
         <label>Scale:</label>
-        <input type="radio" id="celsius" name="scale" value="Celsius" checked />
-        <label for="celsius">Celsius</label>
-        <input type="radio" id="fahrenheit" name="scale" value="Fahrenheit" />
-        <label for="fahrenheit">Fahrenheit</label>
+        <div class="scale-options">
+            <input type="radio" id="celsius" name="scale" value="Celsius" checked />
+            <label for="celsius">Celsius</label>
+            <input type="radio" id="fahrenheit" name="scale" value="Fahrenheit" />
+            <label for="fahrenheit">Fahrenheit</label>
+        </div>
     </div>
-    <button type="submit">Check</button>
+    <button type="submit" class="btn btn-primary">Check</button>
 </form>
 
 @if (ViewData["Message"] != null)
 {
-    <p>@ViewData["Message"]</p>
+    <p class="result-message">@ViewData["Message"]</p>
 }

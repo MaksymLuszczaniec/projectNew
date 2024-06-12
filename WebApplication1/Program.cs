@@ -31,3 +31,4 @@ app.MapControllerRoute(
     defaults: new { controller = "Doctor", action = "FeverCheck" });
 
 app.Run();
+

@@ -1,5 +1,7 @@
 ﻿body {
     font-family: Arial, sans-serif;
+    background-color: #f0f8ff; 
+    color: #333; 
 }
 
 .fever-check-form {
@@ -8,7 +10,8 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .form-group {
@@ -19,6 +22,7 @@
         display: block;
         margin-bottom: 5px;
         font-weight: bold;
+        color: #007bff; 
     }
 
 .form-control {
@@ -27,6 +31,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    background-color: red;
 }
 
 .scale-options {
@@ -36,6 +41,7 @@
 
     .scale-options label {
         margin-left: 5px;
+        color: #007bff; 
     }
 
 .btn {
@@ -43,7 +49,7 @@
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #007bff; 
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -51,15 +57,15 @@
 }
 
     .btn:hover {
-        background-color: #0056b3;
+        background-color: #0056b3; 
     }
 
 .result-message {
     margin-top: 20px;
     padding: 10px;
-    border: 1px solid #007bff;
+    border: 1px solid #007bff; 
     border-radius: 5px;
-    background-color: #e9f4ff;
-    color: #007bff;
+    background-color: #e9f4ff; 
+    color: #007bff; 
     font-weight: bold;
 }

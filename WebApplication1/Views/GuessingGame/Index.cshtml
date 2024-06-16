@@ -1,0 +1,38 @@
+﻿@*
+File: Views/GuessingGame/Index.cshtml
+*@
+@model WebApplication1.Controllers.GuessingGameController
+
+<h1>Guessing Game</h1>
+
+<form method="post">
+    <label for="guess">Enter your guess:</label>
+    <input type="number" name="guess" id="guess" />
+    <button type="submit">Submit</button>
+</form>
+
+<p>@ViewData["Message"]</p>
+<p>Attempts: @ViewData["Attempts"]</p>
+
+<h2>High Scores</h2>
+<ul>
+    @{
+        var highScores = ViewData["HighScores"] as List<int>;
+        if (highScores != null)
+        {
+            foreach (var score in highScores)
+            {
+                <li>@score</li>
+            }
+        }
+        else
+        {
+            <li>No high scores yet.</li>
+        }
+    }
+</ul>
+
+
+<script src="/_framework/aspnetcore-browser-refresh.js"></script>
+
+

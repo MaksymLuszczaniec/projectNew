@@ -4,9 +4,19 @@ using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.Services.AddControllersWithViews();
 
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); 
+    options.Cookie.HttpOnly = true; 
+    options.Cookie.IsEssential = true; 
+});
+
 var app = builder.Build();
+
 
 if (!app.Environment.IsDevelopment())
 {
@@ -21,14 +31,20 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+
+app.UseSession();
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
-    name: "feverCheck",
-    pattern: "FeverCheck",
-    defaults: new { controller = "Doctor", action = "FeverCheck" });
+    name: "GuessingGame",
+    pattern: "GuessingGame",
+    defaults: new { controller = "GuessingGame", action = "Index" });
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-
